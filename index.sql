@@ -114,7 +114,7 @@ AND T.`surname` = 'Amato';
 SELECT S.`surname`, S.`name`, S.`registration_number`, DEG.`name` AS 'Degree Name', DEP . `name` AS 'Department Name'
 FROM `students` AS S
 JOIN `degrees` AS DEG ON DEG.`id` = S.`degree_id`
-JOIN `departments` AS DEP ON DEG.`id` = DEG.`department_id`
+JOIN `departments` AS DEP ON DEP.`id` = DEG.`department_id`
 ORDER BY S.`surname`, S.`name`;
 
 --* 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
